@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website with Login & Registration Form</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Unicons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+   <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav_logo">CodingLab</a>
+
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="#" class="nav_link">Home</a>
+            <a href="#" class="nav_link">Product</a>
+            <a href="#" class="nav_link">Services</a>
+            <a href="#" class="nav_link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="button" id="form-open">Login</button>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Login</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
+          <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <img src="images/facebook-logo-new.png" alt="" class="facebook-img">
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="images/google.png" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+        </div>
+
+
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+          <div class="line"></div>
+
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="images/google.png" alt="" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+        </div>
+      </div>
+      <!-- ============== -->
+      <section class="container bg-dark w-50 text-light">
+          <h2 class="text-center m-auto mb-4"> Check the Road </h2>
+          <form class="row g-3 p-3">
+              <div class="col-md-6">
+                  <label for="validationDefault01" class="form-label">Enter road name</label>
+                  <input type="text" class="form-control" id="validationDefault01" placeholder="road name"  required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Enter road direction</label>
+                <input type="text" class="form-control" id="validationDefault02" placeholder="road direction" required>
+              </div>
+              <div class="col-md-12">
+                <label for="validationDefaultUsername" class="form-label">Enter the location</label>
+                <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" placeholder="Your location" required>
+              </div>
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Enter the car type</label>
+                <select name="cars" id="cars" class="form-control" required>
+                      <option >Owners</option>
+                      <option >Taxis</option>
+                      <option >Trucks</option>
+                  </select>
+              </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Select camera id</label>
+              <select name="cars" id="cars" class="form-control">
+                    <option>first</option>
+                    <option>second</option>
+                    <option>third</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Enter your date</label>
+              <input type="datetime-local" required checked id="cartime" name="cartime" class="form-control">
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary w-100">Check the road</button>
+            </div>
+          </form>
+        </section>
+    </section>
+        <script src="bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
+    </body>
+  </html>
