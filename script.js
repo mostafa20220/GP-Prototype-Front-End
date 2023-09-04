@@ -30,3 +30,58 @@ loginBtn.addEventListener("click", (e) => {
   e.preventDefault();
   formContainer.classList.remove("active");
 });
+
+// handle Road form submit
+
+const BASE_URL = "http://localhost:3000";
+
+const submitBtnEl = document.getElementById("submit-btn");
+submitBtnEl.addEventListener("click", handleSubmit);
+
+function handleSubmit(e) {
+  e.preventDefault();
+
+  // select all input fields one by one
+  const road = document.getElementById("roadName").value;
+  const direction = document.getElementById("roadDirection").value;
+  const location = document.getElementById("location").value;
+  const kind = document.getElementById("carType").value;
+  const camId = document.getElementById("camId").value;
+  const date = document.getElementById("date").value;
+
+  // create an object to store all the values
+  const carData = {
+    road,
+    direction,
+    location,
+    kind,
+    camId,
+    date,
+  };
+
+  // make a post request to the server
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(carData),
+  };
+
+
+  fetch(`${BASE_URL}/addCar`, options)
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.error(err));
+
+  // // get request to the server
+  // fetch("http://localhost:3000/")
+  //   .then((res) => res.json())
+  //   .then((data) => console.log(data))
+  //   .catch((err) => console.error(err));
+
+  // // clear the input fields
+  // const inputs = document.querySelectorAll("input");
+  // inputs.forEach((input) => (input.value = ""));
+
+}

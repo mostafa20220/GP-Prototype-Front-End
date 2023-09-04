@@ -128,19 +128,19 @@
           <form class="row g-3 p-3">
               <div class="col-md-6">
                   <label for="validationDefault01" class="form-label">Enter road name</label>
-                  <input type="text" class="form-control" id="validationDefault01" placeholder="road name"  required>
+                  <input type="text" class="form-control" id="roadName" placeholder="road name"  required>
               </div>
               <div class="col-md-6">
                 <label for="validationDefault02" class="form-label">Enter road direction</label>
-                <input type="text" class="form-control" id="validationDefault02" placeholder="road direction" required>
+                <input type="text" class="form-control" id="roadDirection" placeholder="road direction" required>
               </div>
               <div class="col-md-12">
                 <label for="validationDefaultUsername" class="form-label">Enter the location</label>
-                <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" placeholder="Your location" required>
+                <input type="text" class="form-control" id="location"  aria-describedby="inputGroupPrepend2" placeholder="Your location" required>
               </div>
               <div class="col-md-6">
                 <label for="inputEmail4" class="form-label">Enter the car type</label>
-                <select name="cars" id="cars" class="form-control" required>
+                <select name="cars" id="carType" class="form-control" required>
                       <option >Owners</option>
                       <option >Taxis</option>
                       <option >Trucks</option>
@@ -148,7 +148,7 @@
               </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Select camera id</label>
-              <select name="cars" id="cars" class="form-control">
+              <select name="cars" id="camId" class="form-control">
                     <option>first</option>
                     <option>second</option>
                     <option>third</option>
@@ -156,18 +156,11 @@
             </div>
             <div class="col-12">
               <label for="inputAddress" class="form-label">Enter your date</label>
-              <input type="datetime-local" required checked id="cartime" name="cartime" class="form-control">
+              <input type="datetime-local" required checked id="date" name="cartime" class="form-control">
             </div>
+           
             <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100">Check the road</button>
+              <button type="submit" id="submit-btn" class="btn btn-primary w-100">Check the road</button>
             </div>
           </form>
         </section>
